@@ -38,8 +38,9 @@ function Get-SystemDrive {
     return $env:SystemDrive[0]
 }
 
-New-SourceCodeFolder -FolderName "VSO"
-New-SourceCodeFolder -FolderName "Git"
+# New-SourceCodeFolder -FolderName "VSO"
+# New-SourceCodeFolder -FolderName "Git"
+New-SourceCodeFolder -FolderName "Code"
 
 #
 #	File explorer settings
@@ -47,7 +48,7 @@ New-SourceCodeFolder -FolderName "Git"
 
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 
-choco install taskbar-never-combine             
+#choco install taskbar-never-combine             
 choco install explorer-show-all-folders         
 choco install explorer-expand-to-current-folder
 
@@ -56,7 +57,7 @@ Update-ExecutionPolicy -Policy Unrestricted
 $sytemDrive = Get-SystemDrive
 Set-Volume -DriveLetter $sytemDrive -NewFileSystemLabel "OS"
 
-Set-TaskbarOptions -Combine Never
+#Set-TaskbarOptions -Combine Never
 Enable-RemoteDesktop
 
 Disable-InternetExplorerESC
@@ -64,4 +65,4 @@ Disable-InternetExplorerESC
 #
 # Replace command prompt with PowerShell in start menu and Win+X
 #
-Set-CornerNavigationOptions -EnableUsePowerShellOnWinX
+#Set-CornerNavigationOptions -EnableUsePowerShellOnWinX

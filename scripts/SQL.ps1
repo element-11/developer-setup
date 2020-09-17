@@ -12,4 +12,4 @@ choco install sql-server-management-studio --limitoutput
 #
 #	SQL Server Data Tools for 2017
 #
-choco install ssdt17
+#choco install ssdt17

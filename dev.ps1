@@ -47,7 +47,7 @@ ExecuteScript "AddedCoreDev.ps1";
 
 Update-SessionEnvironment
 
-ExecuteScript "VisualStudio.ps1"
+#ExecuteScript "VisualStudio.ps1"
 
 if (Test-PendingReboot) { Invoke-Reboot }
 
